@@ -3,10 +3,117 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 ---
-<MainLayout title="Titel">
+<!-- <MainLayout title="Titel">
 	<article>
 		<h1>Index overskrift</h1>
 		<Button>Klik!</Button>
 		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
 	</article>
-</MainLayout>
+</MainLayout> -->
+
+<MainLayout title="Titel">
+		
+	<article class="max-w-4xl mx-auto p-6">
+		
+		<h1 class="text-4xl font-bold text-center text-blue-500">Velkommen til Min Side</h1>
+		
+		<div class="flex flex-col md:flex-row items-center md:justify-between">
+			<div class="p-4">Logo</div>
+			<div class="p-4">Nav 1</div>
+			<div class="p-4">Nav 2</div>
+			<div class="p-4">Nav 3</div>
+	</article>
+	
+	  <article class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
+		<h1 class="text-4xl font-bold mb-4 text-center">Øvelse 3 - Scaffolding</h1>
+		<div class="flex flex-col md:flex-row items-center md:items-start">
+		  <!-- Billede -->
+		  <img src="https://picsum.photos/600/400" alt="Random Image" class="rounded-lg shadow-lg md:w-1/2"/>
+		  
+		  <!-- Tekst -->
+		  <div class="md:ml-6 mt-4 md:mt-0 md:w-1/2">
+			<p class="text-xl">
+			  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quaerat doloremque expedita id doloribus reprehenderit at vero ipsam. Eaque, voluptatem mollitia. Iure laborum quasi totam numquam, assumenda itaque obcaecati vero!
+			</p> <Link href="https://www.kea.dk" target="_blank" class="text-blue-500 underline self-start">
+				Tryk på mig
+			  </Link>
+		  </div>
+		</div>
+	  </article>
+		
+		  <div class="flex flex-col items-center mt-6"> <!-- Kort overskrift -->
+			  <h2 class="text-2xl font-semibold mb-2">Kort Overskrift</h2>
+			<img src="https://picsum.photos/500/300" alt="Random image" class="rounded-lg shadow-lg"/>
+			<div class="flex flex-col items-start w-full mt-4 px-4 max-w-[500px]">
+			 
+			  
+			  <!-- Tekst og link -->
+			  <div class="flex flex-row justify-between items-start w-full">
+				<p class="text-xl flex-1 mr-4">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quaerat doloremque expedita id doloribus reprehenderit at vero ipsam. Eaque, voluptatem mollitia. Iure laborum quasi totam numquam, assumenda itaque obcaecati vero!
+				</p>
+				<Link href="https://www.kea.dk" target="_blank" class="text-blue-500 underline self-start">
+				  Tryk på mig
+				</Link>
+			  </div>
+			</div>
+		  </div>
+		  
+	<div class="p-4 bg-gray-100">
+		  <div class="flex justify-center items-center h-screen">
+		
+		
+		<p class="text-xl"><img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg shadow-lg mt-4 p-10 mx-auto"/> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat excepturi laudantium quis, aut minus praesentium beatae! Deleniti architecto natus, rem cum magnam obcaecati nulla nihil blanditiis mollitia dolores exercitationem cupiditate.</p>
+		<p class="text-xl"><img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg shadow-lg mt-4 p-10 mx-auto"/> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam quisquam exercitationem voluptatibus. Error saepe neque ea quo deserunt debitis repellat libero optio! Ipsa eaque corporis porro alias perspiciatis facilis nam?</p>
+		 <p class="text-xl"><img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg shadow-lg mt-4 p-10 mx-auto"/> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, mollitia reiciendis? Blanditiis nostrum provident quasi, dolore praesentium facilis obcaecati, autem veritatis doloribus eligendi et! Ad dolor voluptatibus nostrum enim exercitationem.</p></div>
+	 
+	
+		  <div class="flex flex-col items-center mt-6"> <!-- Kort overskrift -->
+			<h2 class="text-2xl font-semibold mb-2">Kort Overskrift</h2>
+		  <img src="https://picsum.photos/500/300" alt="Random image" class="rounded-lg shadow-lg"/>
+		  <div class="flex flex-col items-start w-full mt-4 px-4 max-w-[500px]">
+		   
+			
+			<!-- Tekst og link -->
+			<div class="flex flex-row justify-between items-start w-full">
+			  <p class="text-xl flex-1 mr-4">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quaerat doloremque expedita id doloribus reprehenderit at vero ipsam. Eaque, voluptatem mollitia. Iure laborum quasi totam numquam, assumenda itaque obcaecati vero!
+			  </p>
+			 
+			</div>
+		  </div>
+		</div>
+
+
+		  <div class="p-10 bg-gray-100">
+			<div class="flex justify-center items-center h-screen">
+		  
+		  
+		  <p class="text-xl"><img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg shadow-lg mt-4 p-10 mx-auto"/> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat excepturi laudantium quis, aut minus praesentium beatae! Deleniti architecto natus, rem cum magnam obcaecati nulla nihil blanditiis mollitia dolores exercitationem cupiditate.</p>
+		  <p class="text-xl"><img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg shadow-lg mt-4 p-10 mx-auto"/> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam quisquam exercitationem voluptatibus. Error saepe neque ea quo deserunt debitis repellat libero optio! Ipsa eaque corporis porro alias perspiciatis facilis nam?</p>
+			<p class="text-xl"><img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg shadow-lg mt-4 p-10 mx-auto"/> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, mollitia reiciendis? Blanditiis nostrum provident quasi, dolore praesentium facilis obcaecati, autem veritatis doloribus eligendi et! Ad dolor voluptatibus nostrum enim exercitationem.</p></div>
+			  <p class="text-xl text-center p-10">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quaerat doloremque expedita id doloribus reprehenderit at vero ipsam. Eaque, voluptatem mollitia. Iure laborum quasi totam numquam, assumenda itaque obcaecati vero!
+			  </p>
+			  
+			  <div class="flex flex-col md:flex-row items-center md:justify-between">
+				<div class="p-6">
+				  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus ratione at enim voluptas animi magni ad eligendi quasi, vel libero cupiditate. Fugiat consequuntur aspernatur maiores laboriosam iure ut molestias deserunt.
+				</div>
+				<div class="p-6">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt incidunt quas sint voluptas nobis excepturi omnis nulla? Iusto, obcaecati? Consectetur modi quae officia at officiis laboriosam inventore rem, perferendis blanditiis.
+				</div>
+				<div class="p-6">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum repellendus eos perspiciatis consequatur mollitia temporibus, expedita dolorem fugit, velit ipsam, quasi enim aliquam architecto. Repellat aliquam non iure nobis.
+				</div>
+			  </div>
+
+<!-- 
+		<div class="bg-blue-500 text-white p-6 rounded-lg">Kolonne 1</div>
+		<div class="bg-green-500 text-white p-6 rounded-lg">Kolonne 2</div>
+		<div class="bg-red-500 text-white p-6 rounded-lg">Kolonne 3</div> -->
+	  </div>
+	
+	  </div>
+
+  </MainLayout>
