@@ -2,7 +2,6 @@
 import Link from '../components/Link.astro'
 ---
 
-<Fragment>
 <div x-data="{ showmenu: false }" class="p-4 fixed lg:fixed w-full bg-slate-200" >
     
 <div id="navbar" class="flex flex-row justify-between">
@@ -36,5 +35,4 @@ x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside=
 <li class="text-center py-2 border-b-2"><Link href="#kob-nu" >Køb nu</Link></li>
 </ul>
 </nav>
-</Fragment>
 
