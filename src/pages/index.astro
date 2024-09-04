@@ -4,9 +4,10 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 ---
 
+<<<<<<< HEAD
 
 <MainLayout title="Titel">
-	<section class="bg-blue-500 text-blue-200 rounded-lg grid grid-cols-1 md:grid-cols-2">
+	<section class="bg-blue-900 text-white rounded-lg grid grid-cols-1 md:grid-cols-2">
 	  <!-- Image on the left -->
 	  <div class="grid items-center order-2 md:order-1">
 		<img
@@ -17,19 +18,19 @@ import Link from '../components/Link.astro';
 	  </div>
   
 	  <!-- Text on the right -->
-	  <div class="pl-16 py-16 order-1 md:order-2">
-		<h2 class="text-2xl text-white font-bold uppercase pb-8">
-		  Københavnerbilleder - en guide til hipster foto
+	  <section id="kobenhavnerbilleder" class="pl-16 py-16 order-1 md:order-2">
+		<h2 class="text-5xl text-white font-semibold uppercase pb-8 mt-12">
+		  Københavnerbilleder <br>- en guide til hipster foto
 		</h2>
 		<p class="pb-8">af Sten Simons</p>
 		<Button href="#">Køb bogen</Button>
-	  </div>
+	  </section>
 	</section>
 
-	<section class="bg-blue-100 text-white-500 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-16 p-16">
+	<section id="bogens-indhold" class="bg-blue-100 text-white-500 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-16 p-16">
 		<!-- Left Text Block -->
 		<div class="order-1 md:order-1 flex flex-col justify-center items-center md:items-end text-left md:text-right">
-		  <h2 class="text-2xl text-black font-bold uppercase pb-4">
+		  <h2 class="text-2xl text-black font-semibold uppercase pb-4">
 			Stamdata for bogen
 		  </h2>
 		  <p>Titel: Københavnerbilleder - en guide til hipster foto</p>
@@ -42,7 +43,7 @@ import Link from '../components/Link.astro';
 	
 		<!-- Right Text Block -->
 		<div class="order-2 md:order-2 flex flex-col justify-center items-center md:items-start text-left">
-		  <h2 class="text-2xl text-black font-bold uppercase pb-4">
+		  <h2 class="text-2xl text-black font-semibold uppercase pb-4">
 			Kort om bogen
 		  </h2>
 		  <p>
@@ -75,8 +76,8 @@ import Link from '../components/Link.astro';
 		</div>
 	  </section>
 
-<section class="max-w-4xl mx-auto py-8">
-	<h2 class="text-center text-2xl font-bold mb-8">Bogens kapitler</h2>
+<section class="max-w-6xl mx-auto py-8 border-2 rounded-lg p-6 mb-8">
+	<h2 class="text-left text-2xl font-semibold mb-8 uppercase ml-6">Bogens kapitler</h2>
 	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 	  <!-- Kolonne 1 -->
 	  <div class="space-y-8">
@@ -134,6 +135,413 @@ import Link from '../components/Link.astro';
 	</div>
   </section>
 
-  <section class=""></section>
+  <section class="max-w-6xl mx-auto py-8">
+	<h2 class="text-left text-2xl font-semibold mb-8 uppercase ml-6">Anmeldelser af bogen</h2>
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+	  <!-- Anmeldelse 1 -->
+	  <div class="p-6 bg-white shadow-lg rounded-lg">
+		<div class="flex space-x-1 mb-4">
+			<!-- SVG Stjerne 1 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 2 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 3 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 4 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 5 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+		  </div>
+		<h3 class="text-xl font-semibold mb-4">5 af 6 stjerner</h3>
+		<p class="mb-4">Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
+		<p class="text-gray-500 text-sm">Hanne Hovgaard, Berlingeren</p>
+	  </div>
+  
+	  <!-- Anmeldelse 2 -->
+	  <div class="p-6 bg-white shadow-lg rounded-lg">
+		<div class="flex space-x-1 mb-4">
+			<!-- SVG Stjerne 1 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 2 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 3 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 4 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+		  </div>
+		<h3 class="text-xl font-semibold mb-4">4 af 5 stjerner</h3>
+		<p class="mb-4">Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?</p>
+		<p class="text-gray-500 text-sm">Kim Kloggaard, Fotojournalen.dk</p>
+	  </div>
+  
+	  <!-- Anmeldelse 3 -->
+	  <div class="p-6 bg-white shadow-lg rounded-lg">
+		<div class="flex space-x-1 mb-4">
+			<!-- SVG Stjerne 1 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 2 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 3 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 4 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 5 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			</svg>
+			<!-- SVG Stjerne 6 -->
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
+		  </div>
+		<h3 class="text-xl font-semibold mb-4">6 af 6 stjerner</h3>
+		<p class="mb-4">Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
+		<p class="text-gray-500 text-sm">Volmer Hansen, Lukkertiden.dk</p>
+	  </div>
+	</div>
+  </section>
+
+  <section class="bg-gray-800 text-white py-12 mt-10">
+	<h2 class="max-w-6xl mx-auto px-4 text-2xl uppercase font-semibold mb-10">Galleri - billeder fra bogen</h2>
+	<div class="max-w-6xl mx-auto">
+	  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+		<!-- Image 1 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/_6090016.jpeg"
+			alt="Hipsterfoto 1"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 2 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/0008.jpg"
+			alt="Hipsterfoto 2"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 3 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/agfa-genanvendeligt-kamera-35mm-5.jpg"
+			alt="Hipsterfoto 3"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 4 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/agfa-genanvendeligt-kamera-35mm-11.jpg"
+			alt="Hipsterfoto 4"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 5 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg"
+			alt="Hipsterfoto 5"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 6 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/amarminoen-med-et-agfa-le-box-11.jpg"
+			alt="Hipsterfoto 6"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 7 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/anamorfiske-landskaber-amager-faelled-4.jpg"
+			alt="Hipsterfoto 7"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 8 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/foraar-med-et-agfa-le-box-2021-17.jpg"
+			alt="Hipsterfoto 8"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 9 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-12.jpg"
+			alt="Hipsterfoto 9"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 10 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/nikkormat-ft2-remiseparken-2.jpg"
+			alt="Hipsterfoto 10"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 11 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-17.jpg"
+			alt="Hipsterfoto 11"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+		<!-- Image 12 -->
+		<div class="relative">
+		  <img
+			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-24.jpg"
+			alt="Hipsterfoto 12"
+			class="w-full h-64 object-cover rounded-lg shadow-lg"
+		  />
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  <section id="forfatteren" class="flex flex-col md:flex-row gap-6 p-6 max-w-4xl mx-auto items-center justify-center min-h-screen">
+	<!-- Kolonne 1 -->
+	<div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+	  <h2 class="text-2xl font-semibold mb-4 max-w-10xl uppercase">Forfatteren</h2>
+	  <img src="/src/assets/images/sten_simons.jpg" alt="Forfatterens billede" class="max-w-xs w-full h-auto object-cover mb-4 md:mb-0"/>
+	</div>
+  
+	<!-- Kolonne 2 -->
+	<div class="flex-1 text-center md:text-left">
+	  <p class="text-lg">
+		Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans første fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+		Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne <span class="italic"> Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
+	  </p>
+	</div>
+  </section>
+
+  <section id="kob-nu"><div class="mt-8">
+	<h2 class="text-3xl font-semibold mb-6 text-center uppercase">Køb 'Københavnerbilleder' nu!</h2>
+  </div></section>
+  
+  <form action="#" method="post" class="max-w-2xl mx-auto p-6 border border-gray-300 rounded-lg shadow-md space-y-4 mb-12">
+	<!-- Antal input -->
+	<div>
+	  <label for="antal" class="block text-sm font-medium text-gray-700">Antal:</label>
+	  <input type="number" id="antal" name="antal" placeholder="Angiv antal"
+		class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring focus:ring-sky-200 focus:ring-opacity-50" required>
+	</div>
+  
+	<!-- Levering input -->
+	<fieldset>
+	  <legend class="text-sm font-medium text-gray-700">Levering:</legend>
+	  <div class="flex items-center">
+		<input type="radio" id="levering1" name="levering" value="PostNord" checked
+		  class="h-4 w-4 text-sky-600 border-gray-300 focus:ring-sky-500">
+		<label for="levering1" class="ml-2 text-sm text-gray-700">PostDK</label>
+	  </div>
+	  <div class="flex items-center mt-2">
+		<input type="radio" id="levering2" name="levering" value="Afhent selv"
+		  class="h-4 w-4 text-sky-600 border-gray-300 focus:ring-sky-500">
+		<label for="levering2" class="ml-2 text-sm text-gray-700">Afhent</label>
+	  </div>
+	</fieldset>
+  
+	<!-- Navn input -->
+	<div>
+	  <label for="navn" class="block text-sm font-medium text-gray-700">Navn:</label>
+	  <input type="text" id="navn" name="navn" placeholder="Dit navn"
+		class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring focus:ring-sky-200 focus:ring-opacity-50" required>
+	</div>
+  
+	<!-- Adresse input -->
+	<div>
+	  <label for="adresse" class="block text-sm font-medium text-gray-700">Adresse:</label>
+	  <input type="text" id="adresse" name="adresse" placeholder="Din adresse"
+		class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring focus:ring-sky-200 focus:ring-opacity-50" required>
+	</div>
+  
+	<!-- E-mail input -->
+	<div>
+	  <label for="email" class="block text-sm font-medium text-gray-700">E-mail:</label>
+	  <input type="email" id="email" name="email" placeholder="Din e-mail"
+		class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring focus:ring-sky-200 focus:ring-opacity-50" required>
+	</div>
+  
+	<!-- Postnummer input -->
+	<div>
+	  <label for="postnummer" class="block text-sm font-medium text-gray-700">Postnummer:</label>
+	  <input type="text" id="postnummer" name="postnummer" placeholder="Dit postnummer"
+		class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring focus:ring-sky-200 focus:ring-opacity-50" required>
+	</div>
+  
+	<!-- Bynavn input -->
+	<div>
+	  <label for="bynavn" class="block text-sm font-medium text-gray-700">Bynavn:</label>
+	  <input type="text" id="bynavn" name="bynavn" placeholder="Din by"
+		class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring focus:ring-sky-200 focus:ring-opacity-50" required>
+	</div>
+  
+	<!-- Telefon input -->
+	<div>
+	  <label for="telefon" class="block text-sm font-medium text-gray-700">Telefon:</label>
+	  <input type="tel" id="telefon" name="telefon" placeholder="Dit telefonnummer"
+		class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring focus:ring-sky-200 focus:ring-opacity-50">
+	</div>
+  
+	<!-- Nyhedsbrev checkbox -->
+	<div class="flex items-center">
+	  <input type="checkbox" id="nyhedsbrev" name="nyhedsbrev"
+		class="h-4 w-4 text-sky-600 border-gray-300 focus:ring-sky-500">
+	  <label for="nyhedsbrev" class="ml-2 text-sm text-gray-700">Tilmeld nyhedsbrev</label>
+	</div>
+  
+	<!-- Submit knap --> 
+	<div class="text-right mt-4">
+	  <Button variant="primary" size="large">Køb nu</Button>
+	</div>
+  </form>
+
+</article>
 
   </MainLayout>
+
+=======
+<MainLayout title="Titel">
+
+	  <article class="max-w-4xl mx-auto p-6">
+		<h1 class="text-4xl font-bold text-center text-blue-500">Velkommen til Min Side</h1>
+	
+		<div class="flex flex-col md:flex-row items-center md:justify-between">
+			<div class="p-4">Logo</div>
+			<div class="p-4">Nav 1</div>
+			<div class="p-4">Nav 2</div>
+			<div class="p-4">Nav 3</div>
+		</div>
+	</article>
+	
+	<article class="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg">
+		<h1 class="text-4xl font-bold mb-4 text-center">Øvelse 3 - Scaffolding</h1>
+		<div class="flex flex-col md:flex-row items-center md:items-start">
+			<!-- Billede -->
+			<img src="https://picsum.photos/600/400" alt="Random Image" class="rounded-lg shadow-lg w-full md:w-1/2"/>
+	
+			<!-- Tekst -->
+			<div class="md:ml-6 mt-4 md:mt-0 md:w-1/2">
+				<p class="text-xl">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quaerat doloremque expedita id doloribus reprehenderit at vero ipsam. Eaque, voluptatem mollitia. Iure laborum quasi totam numquam, assumenda itaque obcaecati vero!
+				</p>
+				<a href="https://www.kea.dk" target="_blank" class="text-blue-500 underline block mt-4">Tryk på mig</a>
+			</div>
+		</div>
+	</article>
+	
+	<div class="flex flex-col items-center mt-6 max-w-4xl mx-auto p-6">
+		<!-- Kort overskrift -->
+		<h2 class="text-2xl font-semibold mb-2 text-center">Kort Overskrift</h2>
+		<img src="https://picsum.photos/500/300" alt="Random image" class="rounded-lg shadow-lg w-full"/>
+	
+		<div class="flex flex-col items-start w-full mt-4 px-4 max-w-[500px]">
+			<!-- Tekst og link -->
+			<div class="flex flex-col md:flex-row items-start w-full">
+				<p class="text-xl flex-1 mr-4">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quaerat doloremque expedita id doloribus reprehenderit at vero ipsam. Eaque, voluptatem mollitia. Iure laborum quasi totam numquam, assumenda itaque obcaecati vero!
+				</p>
+				<a href="https://www.kea.dk" target="_blank" class="text-blue-500 underline self-start mt-4 md:mt-0">
+					Tryk på mig
+				</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="p-6 bg-gray-100">
+		<div class="max-w-4xl mx-auto">
+			<div class="flex flex-col md:flex-row items-center justify-between">
+				<p class="text-xl md:w-1/3 mb-4 md:mb-0">
+					<img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg p-6"/> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat excepturi laudantium quis, aut minus praesentium beatae! Deleniti architecto natus, rem cum magnam obcaecati nulla nihil blanditiis mollitia dolores exercitationem cupiditate.
+				</p>
+				<p class="text-xl md:w-1/3 mb-4 md:mb-0">
+					<img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg p-6"/> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam quisquam exercitationem voluptatibus. Error saepe neque ea quo deserunt debitis repellat libero optio! Ipsa eaque corporis porro alias perspiciatis facilis nam?
+				</p>
+				<p class="text-xl md:w-1/3">
+					<img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg p-6"/> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, mollitia reiciendis? Blanditiis nostrum provident quasi, dolore praesentium facilis obcaecati, autem veritatis doloribus eligendi et! Ad dolor voluptatibus nostrum enim exercitationem.
+				</p>
+			</div>
+		</div>
+	
+		<div class="flex flex-col items-center mt-6 max-w-4xl mx-auto p-6">
+			<!-- Kort overskrift -->
+			<h2 class="text-2xl font-semibold mb-2 text-center">Kort Overskrift</h2>
+			<img src="https://picsum.photos/500/300" alt="Random image" class="rounded-lg shadow-lg w-full"/>
+			<div class="flex flex-col items-start w-full mt-4 px-4 max-w-[500px]">
+				<!-- Tekst og link -->
+				<p class="text-xl">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quaerat doloremque expedita id doloribus reprehenderit at vero ipsam. Eaque, voluptatem mollitia. Iure laborum quasi totam numquam, assumenda itaque obcaecati vero!
+				</p>
+			</div>
+		</div>
+	
+		<div class="p-10 bg-gray-100">
+			<div class="max-w-4xl mx-auto">
+				<div class="flex flex-col md:flex-row items-center justify-between">
+					<p class="text-xl md:w-1/3 mb-4 md:mb-0">
+						<img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg p-6"/> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat excepturi laudantium quis, aut minus praesentium beatae! Deleniti architecto natus, rem cum magnam obcaecati nulla nihil blanditiis mollitia dolores exercitationem cupiditate.
+					</p>
+					<p class="text-xl md:w-1/3 mb-4 md:mb-0">
+						<img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg p-6"/> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam quisquam exercitationem voluptatibus. Error saepe neque ea quo deserunt debitis repellat libero optio! Ipsa eaque corporis porro alias perspiciatis facilis nam?
+					</p>
+					<p class="text-xl md:w-1/3">
+						<img src="https://picsum.photos/300/200" alt="Random image" class="rounded-lg p-6"/> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, mollitia reiciendis? Blanditiis nostrum provident quasi, dolore praesentium facilis obcaecati, autem veritatis doloribus eligendi et! Ad dolor voluptatibus nostrum enim exercitationem.
+					</p>
+				</div>
+	
+				<p class="text-xl text-center p-10">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, quaerat doloremque expedita id doloribus reprehenderit at vero ipsam. Eaque, voluptatem mollitia. Iure laborum quasi totam numquam, assumenda itaque obcaecati vero!
+				</p>
+	
+				<div class="flex flex-col md:flex-row items-center md:justify-between">
+					<div class="p-6">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus ratione at enim voluptas animi magni ad eligendi quasi, vel libero cupiditate. Fugiat consequuntur aspernatur maiores laboriosam iure ut molestias deserunt.
+					</div>
+					<div class="p-6">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt incidunt quas sint voluptas nobis excepturi omnis nulla? Iusto, obcaecati? Consectetur modi quae officia at officiis laboriosam inventore rem, perferendis blanditiis.
+					</div>
+					<div class="p-6">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam nostrum repellendus eos perspiciatis consequatur mollitia temporibus, expedita dolorem fugit, velit ipsam, quasi enim aliquam architecto. Repellat aliquam non iure nobis.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+  </MainLayout>
+>>>>>>> d780e06f34e7c161e08fb65d8c1eb42276957db6
