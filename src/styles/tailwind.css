@@ -24,3 +24,9 @@
     }
   }
 }
+
+/* src/styles/global.css */
+p {
+  @apply font-sans text-base text-white; /* Ændr disse klasser for at tilpasse efter dine behov */
+}
+

@@ -4,11 +4,13 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import tailwind from "../tailwind.css";
 import Footer from "../components/Footer.astro";
----
+--- 
 
 <MainLayout title="Titel">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animista@1.1.1/dist/animista.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 
 <!-- Hero Unit med pulserende titel  -->
 <section class="bg-lime-800 text-white grid grid-cols-1 md:grid-cols-2">
@@ -23,11 +25,11 @@ import Footer from "../components/Footer.astro";
   
 	<!-- Tekst til højre -->
 	<section id="kobenhavnerbilleder" class="pl-16 py-16 order-1 md:order-2">
-	  <h2 class="text-3xl text-white font-semibold uppercase pb-8 mt-20 animate-pulse">
+	  <h2 class="text-4xl text-white font-semibold uppercase pb-8 mt-20 animate-pulse font-sans">
 		Københavnerbilleder <br>- en guide til hipster foto
 	  </h2>
 	  <p class="pb-8 mb-20">af Sten Simons</p>
-	  <a href="#" class="inline-block px-8 py-4 hover:bg-yellow-500 bg-gray-800   border font-semibold rounded-full shadow-lg transform transition-transform duration-500 hover:scale-110 hover:rotate-180 animate-streetEffect">
+	  <a href="#" class="inline-block px-8 py-4 hover:bg-yellow-500 bg-gray-800   border font-semibold shadow-lg transform transition-transform duration-500 hover:scale-110 hover:rotate-180 animate-streetEffect">
 		Køb bogen
 	  </a>
 	  
@@ -62,24 +64,38 @@ import Footer from "../components/Footer.astro";
 	  <section class="bg-white text-black flex justify-center items-center py-16">
 		<!-- Container for img -->
 		<div class="flex space-x-4">
-		  <!-- Image 1 -->
-		  <img
-			src="/src/assets/images/kobenhavnerbilleder_aaben_venstre.jpg"
-			alt="Beskrivelse af billede 1"
-			class="w-1/3 h-auto object-cover shadow-lg transition-transform duration-300 hover:scale-105"
-		  />
-		  <!-- Image 2 -->
-		  <img
-			src="/src/assets/images/kobenhavnerbilleder-sten-simons.jpg"
-			alt="Beskrivelse af billede 2"
-			class="w-1/3 h-auto object-cover shadow-lg transition-transform duration-300 hover:scale-105"
-		  />
-		  <!-- Image 3 -->
-		  <img
-			src="/src/assets/images/kobenhavnerbilleder_oppefra.jpg"
-			alt="Beskrivelse af billede 3"
-			class="w-1/3 h-auto object-cover shadow-lg transition-transform duration-300 hover:scale-105"
-		  />
+		  <!-- Image 1 with Gradient Mask -->
+		  <div class="relative w-1/3 h-auto overflow-hidden">
+			<img
+			  src="/src/assets/images/kobenhavnerbilleder_aaben_venstre.jpg"
+			  alt="Beskrivelse af billede 1"
+			  class="w-full h-auto object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+			/>
+			<!-- Gradient Mask (Top to Bottom) -->
+			<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 mask-image-gradient transition-opacity duration-300 hover:opacity-0"></div>
+		  </div>
+	  
+		  <!-- Image 2 with Gradient Mask -->
+		  <div class="relative w-1/3 h-auto overflow-hidden">
+			<img
+			  src="/src/assets/images/kobenhavnerbilleder-sten-simons.jpg"
+			  alt="Beskrivelse af billede 2"
+			  class="w-full h-auto object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+			/>
+			<!-- Gradient Mask (Top to Bottom) -->
+			<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 mask-image-gradient transition-opacity duration-300 hover:opacity-0"></div>
+		  </div>
+	  
+		  <!-- Image 3 with Gradient Mask -->
+		  <div class="relative w-1/3 h-auto overflow-hidden">
+			<img
+			  src="/src/assets/images/kobenhavnerbilleder_oppefra.jpg"
+			  alt="Beskrivelse af billede 3"
+			  class="w-full h-auto object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+			/>
+			<!-- Gradient Mask (Top to Bottom)-->
+			<div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 mask-image-gradient transition-opacity duration-300 hover:opacity-0"></div>
+		  </div>
 		</div>
 	  </section>
 
@@ -172,7 +188,7 @@ import Footer from "../components/Footer.astro";
 		  </div>
 		<h3 class="text-xl font-semibold mb-4">5 af 6 stjerner</h3>
 		<p class="mb-4">Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
-		<p class="text-gray-500 text-sm">Hanne Hovgaard, Berlingeren</p>
+		<p class="text-gray-800 text-sm">Hanne Hovgaard, Berlingeren</p>
 	  </div>
   
 	  <!-- Anmeldelse 2 -->
@@ -197,7 +213,7 @@ import Footer from "../components/Footer.astro";
 		  </div>
 		<h3 class="text-xl font-semibold mb-4">4 af 5 stjerner</h3>
 		<p class="mb-4">Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?</p>
-		<p class="text-gray-500 text-sm mt-28">Kim Kloggaard, Fotojournalen.dk</p>
+		<p class="text-gray-800 text-sm mt-28">Kim Kloggaard, Fotojournalen.dk</p>
 	  </div>
   
 	  <!-- Anmeldelse 3 -->
@@ -230,7 +246,7 @@ import Footer from "../components/Footer.astro";
 		  </div>
 		<h3 class="text-xl font-semibold mb-4">6 af 6 stjerner</h3>
 		<p class="mb-4">Sten Simons kan det der - og han bliver bedre og bedre. Stens tredje fotobog er klart den bedste - her er han for alvor i sit rette element, meget bedre end “studiefotografering som begyndere.” Tillykke - godt arbejde.</p>
-		<p class="text-gray-500 text-sm mt-10">Volmer Hansen, Lukkertiden.dk</p>
+		<p class="text-gray-800 text-sm mt-10">Volmer Hansen, Lukkertiden.dk</p>
 	  </div>
 	</div>
   </section>
