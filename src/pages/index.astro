@@ -2,31 +2,40 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
+import tailwind from "../tailwind.css";
+import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout title="Titel">
-	<section class="bg-blue-900 text-white rounded-lg grid grid-cols-1 md:grid-cols-2">
-	  <!-- Image on the left -->
-	  <div class="grid items-center order-2 md:order-1">
-		<img
-		  src="/src/assets/images/kobenhavnerbilleder-sten-simons.jpg"
-		  alt="Bogen Københavnerbilleder"
-		  class="w-full h-auto"
-		/>
-	  </div>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animista@1.1.1/dist/animista.min.css">
+
+<!-- Hero Unit med pulserende titel  -->
+<section class="bg-blue-900 text-white rounded-lg grid grid-cols-1 md:grid-cols-2">
+	<!-- Billede til venstre -->
+	<div class="grid items-center order-2 md:order-1">
+	  <img
+		src="/src/assets/images/kobenhavnerbilleder-sten-simons.jpg"
+		alt="Bogen Københavnerbilleder"
+		class="w-full h-auto transition-transform duration-500"
+	  />
+	</div>
   
-	  <!-- Text on the right -->
-	  <section id="kobenhavnerbilleder" class="pl-16 py-16 order-1 md:order-2">
-		<h2 class="text-5xl text-white font-semibold uppercase pb-8 mt-20">
-		  Københavnerbilleder <br>- en guide til hipster foto
-		</h2>
-		<p class="pb-8 mb-20">af Sten Simons</p>
-		<Button href="#">Køb bogen</Button>
-	  </section>
+	<!-- Tekst til højre -->
+	<section id="kobenhavnerbilleder" class="pl-16 py-16 order-1 md:order-2">
+	  <h2 class="text-3xl text-white font-semibold uppercase pb-8 mt-20 animate-pulse">
+		Københavnerbilleder <br>- en guide til hipster foto
+	  </h2>
+	  <p class="pb-8 mb-20">af Sten Simons</p>
+	  <a href="#" class="inline-block px-8 py-4 bg-yellow-500 text-gray-900 font-semibold rounded-full shadow-lg transform transition-transform duration-500 hover:scale-110 hover:rotate-180 animate-streetEffect">
+		Køb bogen
+	  </a>
+	  
 	</section>
+  </section>
 
 	<section id="bogens-indhold" class="bg-blue-100 text-white-500 rounded-lg grid grid-cols-1 md:grid-cols-2 gap-16 p-16">
-		<!-- Left Text Block -->
+		<!-- Kolonne 1 tekst -->
 		<div class="order-1 md:order-1 flex flex-col justify-center items-center md:items-end text-left md:text-right">
 		  <h2 class="text-2xl text-black font-semibold uppercase pb-4 mt-12">
 			Stamdata for bogen
@@ -39,7 +48,7 @@ import Link from '../components/Link.astro';
 		  <p>Pris: 399.-</p>
 		</div>
 	
-		<!-- Right Text Block -->
+		<!-- Kolonne 2 tekst -->
 		<div class="order-2 md:order-2 flex flex-col justify-center items-center md:items-start text-left">
 		  <h2 class="text-2xl text-black font-semibold uppercase pb-4">
 			Kort om bogen
@@ -51,87 +60,88 @@ import Link from '../components/Link.astro';
 	  </section>
 
 	  <section class="bg-white text-black flex justify-center items-center py-16">
-		<!-- Container for the images -->
+		<!-- Container for img -->
 		<div class="flex space-x-4">
 		  <!-- Image 1 -->
 		  <img
 			src="/src/assets/images/kobenhavnerbilleder_aaben_venstre.jpg"
 			alt="Beskrivelse af billede 1"
-			class="w-1/3 h-auto object-cover rounded-lg shadow-lg"
+			class="w-1/3 h-auto object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-110"
 		  />
 		  <!-- Image 2 -->
 		  <img
 			src="/src/assets/images/kobenhavnerbilleder-sten-simons.jpg"
 			alt="Beskrivelse af billede 2"
-			class="w-1/3 h-auto object-cover rounded-lg shadow-lg"
+			class="w-1/3 h-auto object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-110"
 		  />
 		  <!-- Image 3 -->
 		  <img
 			src="/src/assets/images/kobenhavnerbilleder_oppefra.jpg"
 			alt="Beskrivelse af billede 3"
-			class="w-1/3 h-auto object-cover rounded-lg shadow-lg"
+			class="w-1/3 h-auto object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-110"
 		  />
 		</div>
 	  </section>
 
-<section class="bg-slate-300 max-w-6xl mx-auto py-8 border-2 rounded-lg p-6 mb-8 shadow-lg mt-6">
-	<h2 class="text-left text-2xl font-semibold mb-8 uppercase ml-6 text-black">Bogens kapitler</h2>
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-	  <!-- Kolonne 1 -->
-	  <div class="space-y-8">
-		<!-- Kapitel 1 -->
-		<div class="p-6 bg-white rounded-lg shadow-lg">
-		  <h3 class="text-xl font-semibold mb-4">Kapitel 1 - Intro til street foto</h3>
-		  <p>Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.</p>
+	  <section class="bg-slate-300 max-w-6xl mx-auto py-8 border-2 rounded-lg p-6 mb-8 shadow-lg mt-6 animate__animated animate__fadeInUp">
+		<h2 class="text-left text-2xl font-semibold mb-8 uppercase ml-6 text-black animate__animated animate__fadeIn animate__delay-1s">Bogens kapitler</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+		  <!-- Kolonne 1 -->
+		  <div class="space-y-8">
+			<!-- Kapitel 1 -->
+			<div class="p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInLeft">
+			  <h3 class="text-xl font-semibold mb-4">Kapitel 1 - Intro til street foto</h3>
+			  <p class="text-lg mb-8 text-left">Hvad er street foto? Det handler i bund og grund om at skyde byens liv og byens geometri (urban geometry). I dette kapitel får du en grundig intro til hvad street foto er og et overblik over nogen af de kendte street-fotografer. Alt krydret med en masse gode eksempler på street fotos.</p>
+			</div>
+	  
+			<!-- Kapitel 2 -->
+			<div class="p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInLeft animate__delay-1s">
+			  <h3 class="text-xl font-semibold mb-4">Kapitel 2 - Om at skyde street</h3>
+			  <p class="text-lg mb-8 text-left">Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet.</p>
+			</div>
+	  
+			<!-- Kapitel 3 -->
+			<div class="p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInLeft animate__delay-2s">
+			  <h3 class="text-xl font-semibold mb-4">Kapitel 3 - Om at finde det rette motiv</h3>
+			  <p class="text-lg mb-8 text-left">Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.</p>
+			</div>
+	  
+			<!-- Kapitel 4 -->
+			<div class="p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInLeft animate__delay-3s">
+			  <h3 class="text-xl font-semibold mb-4">Kapitel 4 - Digital street foto</h3>
+			  <p class="text-lg mb-8 text-left">De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto.</p>
+			</div>
+		  </div>
+	  
+		  <!-- Kolonne 2 -->
+		  <div class="space-y-8">
+			<!-- Kapitel 5 -->
+			<div class="p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInRight">
+			  <h3 class="text-xl font-semibold mb-4">Kapitel 5 - Analog street foto</h3>
+			  <p class="text-lg mb-8 text-left">Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto.</p>
+			</div>
+	  
+			<!-- Kapitel 6 -->
+			<div class="p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInRight animate__delay-1s">
+			  <h3 class="text-xl font-semibold mb-4">Kapitel 6 - Om at skyde sort/hvid</h3>
+			  <p class="text-lg mb-8 text-left">Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering.</p>
+			</div>
+	  
+			<!-- Kapitel 7 -->
+			<div class="p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInRight animate__delay-2s">
+			  <h3 class="text-xl font-semibold mb-4">Kapitel 7 - Kreative teknikker</h3>
+			  <p class="text-lg mb-8 text-left">Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!</p>
+			</div>
+	  
+			<!-- Kapitel 8 -->
+			<div class="p-6 bg-white rounded-lg shadow-lg animate__animated animate__fadeInRight animate__delay-3s">
+			  <h3 class="text-xl font-semibold mb-4">Kapitel 8 - Kom helt tæt på!</h3>
+			  <p class="text-lg mb-8 text-left">Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
+			</div>
+		  </div>
 		</div>
-  
-		<!-- Kapitel 2 -->
-		<div class="p-6 bg-white rounded-lg shadow-lg">
-		  <h3 class="text-xl font-semibold mb-4">Kapitel 2 - Om at skyde street</h3>
-		  <p>Vil du skyde street? Så er der ikke nogen vej udenom: Du skal ud på gaderne og prøve det! I dette kapitel får du en teknisk indføring i hvordan du bedst skyder street. Uanset om du er begynder eller professionel, er der mange gode tekniske tips og tricks til street-skyderiet.</p>
-		</div>
-  
-		<!-- Kapitel 3 -->
-		<div class="p-6 bg-white rounded-lg shadow-lg">
-		  <h3 class="text-xl font-semibold mb-4">Kapitel 3 - Om at finde det rette motiv</h3>
-		  <p>Indimellem er man heldig, andre gange kommer man hjem helt uden gode motiver. Med et par tips og tricks til at finde de rette motiver, stiger chancen gevaldigt for at fange de gode motiver.</p>
-		</div>
-  
-		<!-- Kapitel 4 -->
-		<div class="p-6 bg-white rounded-lg shadow-lg">
-		  <h3 class="text-xl font-semibold mb-4">Kapitel 4 - Digital street foto</h3>
-		  <p>De fleste af os skyder oftest digitalt fordi det er billigere og nemmere. Og nogen teknikker og fremgangsmåder egner sig kun til digital street foto. I dette kapitel får du en række tips og tricks til digital street-foto.</p>
-		</div>
-	  </div>
-  
-	  <!-- Kolonne 2 -->
-	  <div class="space-y-8">
-		<!-- Kapitel 5 -->
-		<div class="p-6 bg-white rounded-lg shadow-lg">
-		  <h3 class="text-xl font-semibold mb-4">Kapitel 5 - Analog street foto</h3>
-		  <p>Analog er sejt fordi det er mere “ægte,” dyrere og mere besværligt end digital. Det signalerer entusiasme. Nogle teknikker og fremgangsmåder egner sig bedst til analog street foto. I dette kapitel får du en række tips og tricks til analog street-foto.</p>
-		</div>
-  
-		<!-- Kapitel 6 -->
-		<div class="p-6 bg-white rounded-lg shadow-lg">
-		  <h3 class="text-xl font-semibold mb-4">Kapitel 6 - Om at skyde sort/hvid</h3>
-		  <p>Alle street-fotografer skyder sort/hvid nu og da. Nogen altid. Hvorfor? Hvad er der specielt ved sort/hvid fotografering, og hvad adskiller sort/hvid fra farvefotografering? Her får du en række tips og tricks til sort/hvid fotografering.</p>
-		</div>
-  
-		<!-- Kapitel 7 -->
-		<div class="p-6 bg-white rounded-lg shadow-lg">
-		  <h3 class="text-xl font-semibold mb-4">Kapitel 7 - Kreative teknikker</h3>
-		  <p>Dobbelteksponeringer, ICM (intentional camera moves), smadrede objektiver, gamle filmruller og alle mulige andre, spændende kreative teknikker kan løfte dine fotografier fra at være kedelige dokumentationer af hverdagen til at blive vilde kunststykker. Så dyk ned i dette kapitel om eksperimenterende teknikker!</p>
-		</div>
-  
-		<!-- Kapitel 8 -->
-		<div class="p-6 bg-white rounded-lg shadow-lg">
-		  <h3 class="text-xl font-semibold mb-4">Kapitel 8 - Kom helt tæt på!</h3>
-		  <p>Street foto handler om at fotografere livet på gaden - men tør du at gå helt tæt på fremmede mennesker og knipse løs? Du kan lige så godt øve dig, for det er det der vil gøre dig til en bedre street-fotograf…</p>
-		</div>
-	  </div>
-	</div>
-  </section>
+	  </section>
+	  
 
   <section class="max-w-6xl mx-auto py-8">
 	<h2 class="text-left text-2xl font-semibold mb-8 uppercase ml-6">Anmeldelser af bogen</h2>
@@ -140,25 +150,25 @@ import Link from '../components/Link.astro';
 	  <div class="p-6 bg-white shadow-lg rounded-lg">
 		<div class="flex space-x-1 mb-4">
 			<!-- SVG Stjerne 1 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 2 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 3 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 4 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 5 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 		  </div>
 		<h3 class="text-xl font-semibold mb-4">5 af 6 stjerner</h3>
 		<p class="mb-4">Københavnerbilleder er en grundig introduktion til at skyde billeder med retro-kant. Hvad enten du er har arbejdet med foto siden 135-filmen kom på markedet, du kun har skudt digitalt eller er helt nybegynder, er der masser af tips og tricks i bogen.</p>
@@ -169,21 +179,21 @@ import Link from '../components/Link.astro';
 	  <div class="p-6 bg-white shadow-lg rounded-lg">
 		<div class="flex space-x-1 mb-4">
 			<!-- SVG Stjerne 1 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 2 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 3 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 4 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 		  </div>
 		<h3 class="text-xl font-semibold mb-4">4 af 5 stjerner</h3>
 		<p class="mb-4">Teksten er underholdende, og billederne er sku’ flotte. Hvad mere skal man sige om en fotobog?</p>
@@ -194,27 +204,27 @@ import Link from '../components/Link.astro';
 	  <div class="p-6 bg-white shadow-lg rounded-lg">
 		<div class="flex space-x-1 mb-4">
 			<!-- SVG Stjerne 1 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 2 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 3 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 4 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 5 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
-			  <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-			</svg>
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+			  </svg>
 			<!-- SVG Stjerne 6 -->
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-yellow-500">
+			<svg id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-yellow-500">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
 			  </svg>
 		  </div>
@@ -234,7 +244,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/_6090016.jpeg"
 			alt="Hipsterfoto 1"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 2 -->
@@ -242,7 +252,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/0008.jpg"
 			alt="Hipsterfoto 2"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 3 -->
@@ -250,7 +260,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/agfa-genanvendeligt-kamera-35mm-5.jpg"
 			alt="Hipsterfoto 3"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 4 -->
@@ -258,7 +268,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/agfa-genanvendeligt-kamera-35mm-11.jpg"
 			alt="Hipsterfoto 4"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 5 -->
@@ -266,7 +276,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/agfa-genanvendeligt-kamera-35mm-film-2-5.jpg"
 			alt="Hipsterfoto 5"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 6 -->
@@ -274,7 +284,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/amarminoen-med-et-agfa-le-box-11.jpg"
 			alt="Hipsterfoto 6"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 7 -->
@@ -282,7 +292,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/anamorfiske-landskaber-amager-faelled-4.jpg"
 			alt="Hipsterfoto 7"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 8 -->
@@ -290,7 +300,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/foraar-med-et-agfa-le-box-2021-17.jpg"
 			alt="Hipsterfoto 8"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 9 -->
@@ -298,7 +308,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-12.jpg"
 			alt="Hipsterfoto 9"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 10 -->
@@ -306,7 +316,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/nikkormat-ft2-remiseparken-2.jpg"
 			alt="Hipsterfoto 10"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 11 -->
@@ -314,7 +324,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-17.jpg"
 			alt="Hipsterfoto 11"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 		<!-- Image 12 -->
@@ -322,7 +332,7 @@ import Link from '../components/Link.astro';
 		  <img
 			src="/src/assets/images/orestad-til-islands-brygge-pentax-auto-110-24.jpg"
 			alt="Hipsterfoto 12"
-			class="w-full h-64 object-cover rounded-lg shadow-lg"
+			class="w-full h-64 object-cover rounded-lg shadow-lg animate__animated animate__flipInY"
 		  />
 		</div>
 	  </div>
@@ -333,14 +343,14 @@ import Link from '../components/Link.astro';
 	<!-- Kolonne 1 -->
 	<div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
 	  <h2 class="text-2xl font-semibold mb-4 max-w-10xl uppercase">Forfatteren</h2>
-	  <img src="/src/assets/images/sten_simons.jpg" alt="Forfatterens billede" class="max-w-xs w-full h-auto object-cover mb-4 md:mb-0 rounded-lg"/>
+	  <img src="/src/assets/images/sten_simons.jpg" alt="Forfatterens billede" class="max-w-xs w-full h-auto object-cover mb-4 md:mb-0 rounded-lg animate__animated animate__fadeIn"/>
 	</div>
   
 	<!-- Kolonne 2 -->
-	<div class="flex-1 text-center md:text-left">
-	  <p class="text-lg">
+	<div class="flex-1">
+	  <p class="text-lg mb-8 text-left">
 		Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans første fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
-		Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne <span class="italic"> Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
+		Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne <span class="italic">Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.</span>
 	  </p>
 	</div>
   </section>
@@ -422,7 +432,7 @@ import Link from '../components/Link.astro';
 	</div>
   
 	<!-- Submit knap --> 
-	<div class="text-right mt-4">
+	<div class="text-right mt-4 animate-bounce">
 	  <Button variant="primary" size="large">Køb nu</Button>
 	</div>
   </form>
